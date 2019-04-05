@@ -1,27 +1,25 @@
 <!-- markdownlint-disable MD002 MD041 -->
 
-<span data-ttu-id="ada98-101">この手順では、アプリケーションレジストリポータル (ARP) を使用して、新しい Azure AD ネイティブアプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="ada98-101">In this exercise you will create a new Azure AD native application using the Application Registry Portal (ARP).</span></span>
+<span data-ttu-id="c3bac-101">この手順では、azure Active Directory 管理センターを使用して、新しい azure AD ネイティブアプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-101">In this exercise you will create a new Azure AD native application using the Azure Active Directory admin center.</span></span>
 
-1. <span data-ttu-id="ada98-102">ブラウザーを開き、[アプリケーション登録ポータル](https://apps.dev.microsoft.com)に移動して、**個人アカウント**(別名: Microsoft アカウント) または**職場または学校のアカウント**を使用してログインします。</span><span class="sxs-lookup"><span data-stu-id="ada98-102">Open a browser and navigate to the [Application Registration Portal](https://apps.dev.microsoft.com) and login using a **personal account** (aka: Microsoft Account) or **Work or School Account**.</span></span>
+1. <span data-ttu-id="c3bac-102">ブラウザーを開き、 [Azure Active Directory 管理センター](https://aad.portal.azure.com)に移動して、**個人アカウント**(別名: Microsoft アカウント) または**職場または学校のアカウント**を使用してログインします。</span><span class="sxs-lookup"><span data-stu-id="c3bac-102">Open a browser and navigate to the [Azure Active Directory admin center](https://aad.portal.azure.com) and login using a **personal account** (aka: Microsoft Account) or **Work or School Account**.</span></span>
 
-1. <span data-ttu-id="ada98-103">ページの上部にある [**アプリの追加**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ada98-103">Select **Add an app** at the top of the page.</span></span>
+1. <span data-ttu-id="c3bac-103">左側のナビゲーションで [ **Azure Active Directory** ] を選択し、[**管理**] で [**アプリの登録 (プレビュー)** ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-103">Select **Azure Active Directory** in the left-hand navigation, then select **App registrations (Preview)** under **Manage**.</span></span>
 
-    > [!NOTE]
-    > <span data-ttu-id="ada98-104">ページに [**アプリの追加**] ボタンが複数表示されている場合は、[収束した**アプリ**] リストに対応するボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="ada98-104">If you see more than one **Add an app** button on the page, select the one that corresponds to the **Converged apps** list.</span></span>
+    ![<span data-ttu-id="c3bac-104">アプリの登録のスクリーンショット</span><span class="sxs-lookup"><span data-stu-id="c3bac-104">A screenshot of the App registrations</span></span> ](./images/aad-portal-app-registrations.png)
 
-1. <span data-ttu-id="ada98-105">[**アプリケーションの登録**] ページで、[**アプリケーション名**] を「 **UWP Graph チュートリアル**」に設定し、[**作成**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ada98-105">On the **Register your application** page, set the **Application Name** to **UWP Graph Tutorial** and select **Create**.</span></span>
+1. <span data-ttu-id="c3bac-105">[**新しい登録**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-105">Select **New registration**.</span></span> <span data-ttu-id="c3bac-106">[**アプリケーションの登録**] ページで、次のように値を設定します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-106">On the **Register an application** page, set the values as follows.</span></span>
 
-    ![アプリ登録ポータル web サイトで新しいアプリを作成するスクリーンショット](./images/arp-create-app-01.png)
+    - <span data-ttu-id="c3bac-107">**名前**をに`UWP Graph Tutorial`設定します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-107">Set **Name** to `UWP Graph Tutorial`.</span></span>
+    - <span data-ttu-id="c3bac-108">**任意の組織ディレクトリおよび個人の Microsoft アカウントのアカウント**に、**サポートされているアカウントの種類**を設定します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-108">Set **Supported account types** to **Accounts in any organizational directory and personal Microsoft accounts**.</span></span>
+    - <span data-ttu-id="c3bac-109">**リダイレクト URI**は空のままにします。</span><span class="sxs-lookup"><span data-stu-id="c3bac-109">Leave **Redirect URI** empty.</span></span>
 
-1. <span data-ttu-id="ada98-107">[ **UWP Graph のチュートリアル登録**] ページの [**プロパティ**] セクションで、後で必要になるように**アプリケーション Id**をコピーします。</span><span class="sxs-lookup"><span data-stu-id="ada98-107">On the **UWP Graph Tutorial Registration** page, under the **Properties** section, copy the **Application Id** as you will need it later.</span></span>
+    ![[アプリケーションの登録] ページのスクリーンショット](./images/aad-register-an-app.png)
 
-    ![新しく作成されたアプリケーションの ID のスクリーンショット](./images/arp-create-app-02.png)
+1. <span data-ttu-id="c3bac-111">[**登録**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-111">Choose **Register**.</span></span> <span data-ttu-id="c3bac-112">**UWP グラフのチュートリアル**ページで、**アプリケーション (クライアント) ID**の値をコピーして保存します。次の手順で必要になります。</span><span class="sxs-lookup"><span data-stu-id="c3bac-112">On the **UWP Graph Tutorial** page, copy the value of the **Application (client) ID** and save it, you will need it in the next step.</span></span>
 
-1. <span data-ttu-id="ada98-109">[**プラットフォーム**] セクションまで下にスクロールします。</span><span class="sxs-lookup"><span data-stu-id="ada98-109">Scroll down to the **Platforms** section.</span></span>
+    ![新しいアプリの登録のアプリケーション ID のスクリーンショット](./images/aad-application-id.png)
 
-    1. <span data-ttu-id="ada98-110">[**プラットフォームの追加**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ada98-110">Select **Add Platform**.</span></span>
-    1. <span data-ttu-id="ada98-111">[**プラットフォームの追加**] ダイアログで、[**ネイティブアプリケーション**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ada98-111">In the **Add Platform** dialog, select **Native Application**.</span></span>
+1. <span data-ttu-id="c3bac-114">[**リダイレクト URI を追加する**] リンクを選択します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-114">Select the **Add a Redirect URI** link.</span></span> <span data-ttu-id="c3bac-115">[**リダイレクト uri** ] ページで、[**パブリッククライアント (モバイル、デスクトップ)] セクションの推奨されるリダイレクト uri**を見つけます。</span><span class="sxs-lookup"><span data-stu-id="c3bac-115">On the **Redirect URIs** page, locate the **Suggested Redirect URIs for public clients (mobile, desktop)** section.</span></span> <span data-ttu-id="c3bac-116">`urn:ietf:wg:oauth:2.0:oob` URI を選択し、[**保存**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="c3bac-116">Select the `urn:ietf:wg:oauth:2.0:oob` URI, then choose **Save**.</span></span>
 
-        ![アプリのプラットフォームを作成するスクリーンショット](./images/arp-create-app-03.png)
-
-1. <span data-ttu-id="ada98-113">ページの一番下までスクロールして、[**保存**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="ada98-113">Scroll to the bottom of the page and select **Save**.</span></span>
+    ![リダイレクト uri ページのスクリーンショット](./images/aad-redirect-uris.png)
