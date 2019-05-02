@@ -1,8 +1,8 @@
 <!-- markdownlint-disable MD002 MD041 -->
 
-Visual Studio を開き、[ **File > New > Project**] を選択します。 [**新しいプロジェクト**] ダイアログボックスで、次の操作を行います。
+Visual Studio を開き、[ **File _GT_ New _GT_ Project**] を選択します。 [**新しいプロジェクト**] ダイアログボックスで、次の操作を行います。
 
-1. [**テンプレート > Visual C# > Windows Universal**] を選択します。
+1. [**テンプレート _GT_ Visual C# > Windows Universal**] を選択します。
 1. [**空のアプリ (Universal Windows)**] を選択します。
 1. プロジェクトの名前については、「グラフを入力してください」**というチュートリアル**を行います。
 
@@ -11,16 +11,16 @@ Visual Studio を開き、[ **File > New > Project**] を選択します。 [**�
 > [!IMPORTANT]
 > これらのラボ手順で指定した Visual Studio プロジェクトに対して、まったく同じ名前を入力してください。 Visual Studio プロジェクト名は、コード内の名前空間の一部になります。 これらの手順内のコードは、この手順で指定した Visual Studio プロジェクト名に一致する名前空間によって決まります。 別のプロジェクト名を使用すると、プロジェクトの作成時に入力した Visual Studio プロジェクト名と一致するようにすべての名前空間を調整しない限り、コードはコンパイルされません。
 
-**[OK]** をクリックします。 [**新しいユニバーサル Windows プラットフォームプロジェクト**] ダイアログで、[**最小バージョン**] が [また`Windows 10 Fall Creators Update (10.0; Build 16299)`はそれ以降] に設定されていることを確認し、[ **OK**] を選択します。
+**[OK]** を選択します。 [**新しいユニバーサル Windows プラットフォームプロジェクト**] ダイアログで、[**最小バージョン**] が [また`Windows 10 Fall Creators Update (10.0; Build 16299)`はそれ以降] に設定されていることを確認し、[ **OK**] を選択します。
 
 に進む前に、後で使用する追加の NuGet パッケージをインストールします。
 
-- アプリ内通知とロードインジケーターの ui コントロールを追加するには、 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls/)を使用します。
-- microsoft Graph によって返される情報を表示するには、「 [microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid/) 」を参照してください。
+- アプリ内通知とロードインジケーターの UI コントロールを追加するには、 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls/)を使用します。
+- Microsoft Graph によって返される情報を表示するには、「 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid/) 」を参照してください。
 - ログインとアクセストークンの取得を処理するための、 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls.Graph/) 。
-- microsoft graph に電話をかけるための[グラフ](https://www.nuget.org/packages/Microsoft.Graph/)です。
+- Microsoft Graph に電話をかけるための[グラフ](https://www.nuget.org/packages/Microsoft.Graph/)です。
 
-[**ツール > NuGet パッケージマネージャー > パッケージマネージャーコンソール**] を選択します。 パッケージマネージャーコンソールで、次のコマンドを入力します。
+[**ツール _GT_ NuGet パッケージマネージャー _GT_ パッケージマネージャーコンソール**] を選択します。 パッケージマネージャーコンソールで、次のコマンドを入力します。
 
 ```Powershell
 Install-Package Microsoft.Toolkit.Uwp.Ui.Controls
@@ -142,7 +142,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-すべての変更を保存し、 **F5**キーを押すか、[**デバッグ >** ] [Visual Studio でデバッグを開始] を選択します。
+すべての変更を保存し、 **F5**キーを押すか、[**デバッグ _GT_** ] [Visual Studio でデバッグを開始] を選択します。
 
 > [!NOTE]
 > ご使用のコンピューター (ARM、x64、x86) に適した構成を選択してください。

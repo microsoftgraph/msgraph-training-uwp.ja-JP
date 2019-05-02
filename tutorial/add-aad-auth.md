@@ -10,7 +10,7 @@
 ![Visual Studio エディターの OAuth w ファイルのスクリーンショット](./images/edit-resources-01.png)
 
 > [!IMPORTANT]
-> git などのソース管理を使用している場合は、この時点で、ソース管理`OAuth.resw`からファイルを除外して、アプリ ID が誤ってリークしないようにすることをお勧めします。
+> Git などのソース管理を使用している場合は、この時点で、ソース管理`OAuth.resw`からファイルを除外して、アプリ ID が誤ってリークしないようにすることをお勧めします。
 
 ## <a name="configure-the-aadlogin-control"></a>AadLogin コントロールを構成する
 
