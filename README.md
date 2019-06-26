@@ -24,20 +24,22 @@
 
 ## <a name="watch-the-module"></a>モジュールを見る
 
-このモジュールは、「 [Microsoft Graph .NET SDK を使用した UWP アプリのビルド](https://youtu.be/XNxBUmqcf6c)」という Office 開発 YouTube チャネルで記録され、次のように使用できます。
+このモジュールは、「 [Microsoft Graph .NET SDK を使用した UWP アプリのビルド](https://youtu.be/oBYCBxkWMRA)」という Office 開発 YouTube チャネルで記録され、次のように使用できます。
 
 ## <a name="contributors"></a>多様
 
-| ロール                | 作成者 (s)                                                        |
-| -------------------- | ---------------------------------------------------------------- |
-| ラボのマニュアル/スライド | Andrew Connell (Microsoft MVP、Voitanos) @andrewconnell          |
-| QA                   | ジュリー Turner (Microsoft MVP、Sympraxis コンサルティング) @juliemturner |
-| スポンサー/サポート    | Yina (Microsoft) @yina_arenas                             |
+|        ロール         |                                           作成者 (s)                                           |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| ラボのマニュアル/スライド | Andrew Connell (Microsoft MVP、Voitanos) [@andrewconnell](//github.com/andrewconnell)         |
+| QA                   | ジュリー Turner (Microsoft MVP、Sympraxis コンサルティング) [@juliemturner](//github.com/juliemturner) |
+| スポンサー/サポート    | Yina (Microsoft) [@yina_arenas](//github.com//github.com/yina_arenas)                  |
 
 ## <a name="version-history"></a>バージョン履歴
 
-| バージョン | 日付               | コメント                                             |
+| バージョン |        日付        |                       コメント                       |
 | ------- | ------------------ | ---------------------------------------------------- |
+| 1.9     | 2019年6月18日      | 更新された readme を screencast レコーディングに更新しました     |
+| 1.8     | 2019年5月24日       | 2019Q4 コンテンツの更新                               |
 | 1.7     | 2019年3月6日      | 2019Q3 コンテンツの更新                               |
 | 1.6     | 2018年12月19日  | 2019Q2 のコンテンツの更新                               |
 | 1.5     | 2018 年 11 月 27 日  | 利用 ~ docs.microsoft.com/graph                |
