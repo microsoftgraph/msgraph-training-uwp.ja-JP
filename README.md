@@ -6,15 +6,15 @@
 
 このラボでは、Azure AD v2 認証エンドポイントと Microsoft Authentication Library (MSAL) を使用して、Microsoft Graph を使用して Office 365 のデータにアクセスする UWP アプリケーションを作成します。
 
-- [UWP Microsoft Graph のチュートリアル](https://docs.microsoft.com/graph/training/uwp-tutorial)
+- [UWP Microsoft Graph のチュートリアル](https://docs.microsoft.com/graph/tutorials/uwp)
 
 ## <a name="demos"></a>デモ
 
 このリポジトリの[デモ](./Demos)ディレクトリには、チュートリアルの個々のセクションの完成に対応するプロジェクトのコピーが格納されています。 チュートリアルの特定のセクションをデモするだけの場合は、前のセクションのバージョンから始めることができます。
 
-- [01-アプリ](Demos/01-create-app): 完了[(Universal WINDOWS プラットフォーム (UWP) Web アプリの作成)](https://docs.microsoft.com/graph/training/uwp-tutorial?tutorial-step=1)
-- [02-aad](Demos/02-add-aad-auth)-認証: 完了した[Azure AD 認証の追加](https://docs.microsoft.com/graph/training/uwp-tutorial?tutorial-step=3)
-- [03-msgraph](Demos/03-add-msgraph): 完了[予定表データの取得](https://docs.microsoft.com/graph/training/uwp-tutorial?tutorial-step=4)
+- [01-アプリ](Demos/01-create-app): 完了[(Universal WINDOWS プラットフォーム (UWP) Web アプリの作成)](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=1)
+- [02-aad](Demos/02-add-aad-auth)-認証: 完了した[Azure AD 認証の追加](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=3)
+- [03-msgraph](Demos/03-add-msgraph): 完了[予定表データの取得](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=4)
 
 ## <a name="completed-sample"></a>完成したサンプル
 

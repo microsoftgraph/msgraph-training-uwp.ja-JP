@@ -1,12 +1,12 @@
 <!-- markdownlint-disable MD002 MD041 -->
 
-Visual Studio を開き、[**ファイル > 新しい > プロジェクト**] を選択します。 [**新しいプロジェクト**] ダイアログボックスで、次の操作を行います。
+Visual Studio を開き、[**新しいプロジェクトの作成**] を選択します。 C# を使用する [**空のアプリ (Universal Windows)** ] オプションを選択し、[**次へ**] を選択します。
 
-1. **Visual C# > Windows Universal > テンプレート**を選択します。
-1. [**空のアプリ (Universal Windows)**] を選択します。
-1. プロジェクトの名前については、「グラフを入力してください」**というチュートリアル**を行います。
+![Visual Studio 2019 [新しいプロジェクトの作成] ダイアログ](./images/vs-create-new-project.png)
 
-![Visual Studio 2017 [新しいプロジェクトの作成] ダイアログ](./images/vs-newproj-01.png)
+[**新しいプロジェクトの構成**] ダイアログで、 `graph-tutorial` [**プロジェクト名**] フィールドにと入力し、[**作成**] を選択します。
+
+![Visual Studio 2019 [新しいプロジェクトの構成] ダイアログ](./images/vs-configure-new-project.png)
 
 > [!IMPORTANT]
 > これらのラボ手順で指定した Visual Studio プロジェクトに対して、まったく同じ名前を入力してください。 Visual Studio プロジェクト名は、コード内の名前空間の一部になります。 これらの手順内のコードは、この手順で指定した Visual Studio プロジェクト名に一致する名前空間によって決まります。 別のプロジェクト名を使用すると、プロジェクトの作成時に入力した Visual Studio プロジェクト名と一致するようにすべての名前空間を調整しない限り、コードはコンパイルされません。
@@ -23,10 +23,10 @@ Visual Studio を開き、[**ファイル > 新しい > プロジェクト**] �
 [**ツール > NuGet パッケージマネージャー > パッケージマネージャーコンソール**] を選択します。 パッケージマネージャーコンソールで、次のコマンドを入力します。
 
 ```Powershell
-Install-Package Microsoft.Toolkit.Uwp.Ui.Controls
-Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid
-Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.Graph
-Install-Package Microsoft.Graph
+Install-Package Microsoft.Toolkit.Uwp.Ui.Controls -Version 5.1.1
+Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid -Version 5.1.0
+Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.Graph -Version 5.1.0
+Install-Package Microsoft.Graph -Version 1.16.0
 ```
 
 ## <a name="design-the-app"></a>アプリを設計する
@@ -98,19 +98,7 @@ public bool IsAuthenticated { get; set; }
 </StackPanel>
 ```
 
-これで、ソリューションエクスプローラーで**MainPage**を展開し`MainPage.xaml.cs`、を開きます。 この行の`MainPage()` `this.InitializeComponent();` **後**に、次のコードをコンストラクターに追加します。
-
-```cs
-// Initialize auth state to false
-SetAuthState(false);
-
-// Navigate to HomePage.xaml
-RootFrame.Navigate(typeof(HomePage));
-```
-
-アプリが初めて起動するときに、認証状態がに`false`初期化され、ホームページに移動します。
-
-認証状態を管理するため`MainPage`に、次の関数をクラスに追加します。
+これで、ソリューションエクスプローラーで**MainPage**を展開し`MainPage.xaml.cs`、を開きます。 認証状態を管理するため`MainPage`に、次の関数をクラスに追加します。
 
 ```cs
 private void SetAuthState(bool isAuthenticated)
@@ -121,6 +109,18 @@ private void SetAuthState(bool isAuthenticated)
     Calendar.IsEnabled = isAuthenticated;
 }
 ```
+
+この行の`MainPage()` `this.InitializeComponent();` **後**に、次のコードをコンストラクターに追加します。
+
+```cs
+// Initialize auth state to false
+SetAuthState(false);
+
+// Navigate to HomePage.xaml
+RootFrame.Navigate(typeof(HomePage));
+```
+
+アプリが初めて起動するときに、認証状態がに`false`初期化され、ホームページに移動します。
 
 ユーザーがナビゲーションビューでアイテムを選択したときに、要求されたページを読み込むために、次のイベントハンドラーを追加します。
 
