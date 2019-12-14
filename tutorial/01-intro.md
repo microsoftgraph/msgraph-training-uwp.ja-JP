@@ -10,7 +10,7 @@
 このチュートリアルを開始する前に、[開発モードがオンになっ](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)ている Windows 10 を実行しているコンピューターに[Visual Studio](https://visualstudio.microsoft.com/vs/)をインストールしておく必要があります。 Visual Studio を持っていない場合は、「ダウンロードオプション」の前のリンクにアクセスしてください。
 
 > [!NOTE]
-> このチュートリアルは、Visual Studio 2019 version 16.1.5 を使用して作成されています。 このガイドの手順は、他のバージョンでは動作しますが、テストされていません。
+> このチュートリアルは、Visual Studio 2019 version 16.4.0 を使用して作成されています。 このガイドの手順は、他のバージョンでは動作しますが、テストされていません。
 
 ## <a name="watch-the-tutorial"></a>チュートリアルを見る
 
