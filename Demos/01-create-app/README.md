@@ -1,3 +1,0 @@
-# <a name="completed-module-create-a-universal-windows-platform-uwp-app"></a>完了したモジュール: Universal Windows Platform (UWP) アプリを作成する
-
-このディレクトリにあるプロジェクトのバージョンは、「 [Universal Windows プラットフォーム (UWP) アプリを作成する](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=1)」に記載されているチュートリアルを完了することを反映しています。 このバージョンのプロジェクトを使用する場合は、「[ポータルでアプリを登録する」](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=2)を開始して、チュートリアルの残りの部分を完了する必要があります。
