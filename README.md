@@ -8,19 +8,11 @@
 
 - [UWP Microsoft Graph のチュートリアル](https://docs.microsoft.com/graph/tutorials/uwp)
 
-## <a name="demos"></a>デモ
-
-このリポジトリの[デモ](./Demos)ディレクトリには、チュートリアルの個々のセクションの完成に対応するプロジェクトのコピーが格納されています。 チュートリアルの特定のセクションをデモするだけの場合は、前のセクションのバージョンから始めることができます。
-
-- [01-アプリ](Demos/01-create-app): 完了[(Universal WINDOWS プラットフォーム (UWP) Web アプリの作成)](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=1)
-- [02-aad](Demos/02-add-aad-auth)-認証: 完了した[Azure AD 認証の追加](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=3)
-- [03-msgraph](Demos/03-add-msgraph): 完了[予定表データの取得](https://docs.microsoft.com/graph/tutorials/uwp?tutorial-step=4)
-
 ## <a name="completed-sample"></a>完成したサンプル
 
 このラボをフォローすることで完成したサンプルを生成する場合は、ここで見つけることができます。
 
-- [完了したプロジェクト](Demos/03-add-msgraph)
+- [完了したプロジェクト](demo)
 
 ## <a name="watch-the-module"></a>モジュールを見る
 
@@ -38,8 +30,9 @@
 
 | バージョン |        日付        |                       コメント                       |
 | ------- | ------------------ | ---------------------------------------------------- |
+| 1.10    | 2020年3月18日     | 更新されたチュートリアル                                   |
 | 1.9     | 2019年6月18日      | 更新された readme を screencast レコーディングに更新しました     |
-| 1.8     | 2019年5月24日       | 2019Q4 コンテンツの更新                               |
+| 1.8     | 2019 年 5 月 24 日       | 2019Q4 コンテンツの更新                               |
 | 1.7     | 2019年3月6日      | 2019Q3 コンテンツの更新                               |
 | 1.6     | 2018年12月19日  | 2019Q2 のコンテンツの更新                               |
 | 1.5     | 2018 年 11 月 27 日  | 利用 ~ docs.microsoft.com/graph                |
@@ -51,7 +44,7 @@
 
 ## <a name="disclaimer"></a>免責事項
 
-**このコードは、 __ 特定の目的、市販性、または非侵害に対する暗黙の保証を含め、明示的または黙示的ないかなる種類の保証なしに提供されます。**
+**このコードは、特定の目的、市販性、または非侵害に対する暗黙の保証を含め、明示的または黙示的ないかなる種類の保証なし_に提供されます_。**
 
 <!-- markdownlint-disable MD033 -->
 <img src="https://telemetry.sharepointpnp.com/msgraph-training-uwp" />
