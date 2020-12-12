@@ -1,50 +1,19 @@
-# <a name="microsoft-graph-training-module---build-uwp-apps-with-the-microsoft-graph-net-sdk"></a>Microsoft Graph トレーニングモジュール-Microsoft Graph .NET SDK を使用した UWP アプリのビルド
+# <a name="microsoft-graph-training-module---build-uwp-apps-with-the-microsoft-graph-net-sdk"></a>Microsoft Graph トレーニング モジュール - Microsoft Graph .NET SDK を使用して UWP アプリを構築する
 
-このモジュールでは、Microsoft Graph SDK を使用して、ネイティブのユニバーサル Windows プラットフォーム (UWP) アプリケーションを構築することによって、Office 365 のデータにアクセスする方法について説明します。
+このモジュールでは、ネイティブのユニバーサル Windows プラットフォーム (UWP) アプリケーションを構築することで、Microsoft Graph SDK を使用して Office 365 のデータにアクセスする方法について説明します。
 
-## <a name="lab---build-uwp-apps-with-the-microsoft-graph-net-sdk"></a>ラボ-Microsoft Graph .NET SDK を使用した UWP アプリのビルド
+## <a name="lab---build-uwp-apps-with-the-microsoft-graph-net-sdk"></a>ラボ - Microsoft Graph .NET SDK を使用して UWP アプリを構築する
 
-このラボでは、Azure AD v2 認証エンドポイントと Microsoft Authentication Library (MSAL) を使用して、Microsoft Graph を使用して Office 365 のデータにアクセスする UWP アプリケーションを作成します。
+このラボでは、Azure AD v2 認証エンドポイントと Microsoft 認証ライブラリ (MSAL) を使用して UWP アプリケーションを作成し、Microsoft Graph を使用して Office 365 のデータにアクセスします。
 
-- [UWP Microsoft Graph のチュートリアル](https://docs.microsoft.com/graph/tutorials/uwp)
+- [UWP Microsoft Graph チュートリアル](https://docs.microsoft.com/graph/tutorials/uwp)
 
 ## <a name="completed-sample"></a>完成したサンプル
 
-このラボをフォローすることで完成したサンプルを生成する場合は、ここで見つけることができます。
+このラボに従って完成したサンプルを生成するだけの場合は、ここで確認できます。
 
 - [完了したプロジェクト](demo)
 
-## <a name="watch-the-module"></a>モジュールを見る
-
-このモジュールは、「 [Microsoft Graph .NET SDK を使用した UWP アプリのビルド](https://youtu.be/oBYCBxkWMRA)」という Office 開発 YouTube チャネルで記録され、次のように使用できます。
-
-## <a name="contributors"></a>多様
-
-|        ロール         |                                           作成者 (s)                                           |
-| -------------------- | --------------------------------------------------------------------------------------------- |
-| ラボのマニュアル/スライド | Andrew Connell (Microsoft MVP、Voitanos) [@andrewconnell](//github.com/andrewconnell)         |
-| QA                   | ジュリー Turner (Microsoft MVP、Sympraxis コンサルティング) [@juliemturner](//github.com/juliemturner) |
-| スポンサー/サポート    | Yina (Microsoft) [@yina_arenas](//github.com//github.com/yina_arenas)                  |
-
-## <a name="version-history"></a>バージョン履歴
-
-| バージョン |        日付        |                       コメント                       |
-| ------- | ------------------ | ---------------------------------------------------- |
-| 1.10    | 2020年3月18日     | 更新されたチュートリアル                                   |
-| 1.9     | 2019年6月18日      | 更新された readme を screencast レコーディングに更新しました     |
-| 1.8     | 2019 年 5 月 24 日       | 2019Q4 コンテンツの更新                               |
-| 1.7     | 2019年3月6日      | 2019Q3 コンテンツの更新                               |
-| 1.6     | 2018年12月19日  | 2019Q2 のコンテンツの更新                               |
-| 1.5     | 2018 年 11 月 27 日  | 利用 ~ docs.microsoft.com/graph                |
-| 1.4     | 2018年11月2日   | 他のトレーニングとの一貫性を保つためのモジュールを改訂しました。 |
-| 1.3     | 2018年9月20日 | 2019Q1 コンテンツの更新                               |
-| 1.2     | 2018年6月28日      | Screencast を追加しました。                                    |
-| 1.1     | 2018年6月22日      | 最新のガイダンスを使用するように書き直しました。                    |
-| 1.0     | ~ 2017 年11月24日 | Microsoft Graph 関連製品 breakouts を追加します。       |
-
 ## <a name="disclaimer"></a>免責事項
 
-**このコードは、特定の目的、市販性、または非侵害に対する暗黙の保証を含め、明示的または黙示的ないかなる種類の保証なし_に提供されます_。**
-
-<!-- markdownlint-disable MD033 -->
-<img src="https://telemetry.sharepointpnp.com/msgraph-training-uwp" />
+**このコードは、明示または黙示にかかわらず現状のまま提供されます。これには、特定の目的への適性、商品性、権利侵害の不侵害に関する暗黙的な保証が含まれるものとします。**

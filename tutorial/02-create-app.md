@@ -2,32 +2,30 @@
 
 このセクションでは、新しい UWP アプリを作成します。
 
-1. Visual Studio を開き、**[新しいプロジェクトの作成]** を選択します。 C# を使用する [**空のアプリ (Universal Windows)** ] オプションを選択し、[**次へ**] を選択します。
+1. Visual Studio を開き、**[新しいプロジェクトの作成]** を選択します。 C# **を使う空白のアプリ (ユニバーサル Windows)** オプションを選択し、[次へ] を選択 **します**。
 
-    ![Visual Studio 2019 [新しいプロジェクトの作成] ダイアログ](./images/vs-create-new-project.png)
+    ![Visual Studio 2019 で新しいプロジェクトの作成ダイアログを作成する](./images/vs-create-new-project.png)
 
-1. [**新しいプロジェクトの構成**] ダイアログで、 `GraphTutorial` [**プロジェクト名**] フィールドにと入力し、[**作成**] を選択します。
+1. [新しい **プロジェクトの構成]** ダイアログ で、[プロジェクト名] フィールドに `GraphTutorial` **「** 作成」を選択 **します**。
 
-    ![Visual Studio 2019 [新しいプロジェクトの構成] ダイアログ](./images/vs-configure-new-project.png)
+    ![Visual Studio 2019 の [新しいプロジェクトの構成] ダイアログ](./images/vs-configure-new-project.png)
 
     > [!IMPORTANT]
-    > これらのラボ手順で指定した Visual Studio プロジェクトに対して、まったく同じ名前を入力してください。 Visual Studio プロジェクトの名前が、コードでの名前空間の一部になります。 この手順のコードは、この手順で指定した Visual Studio プロジェクト名に一致する名前空間に応じて異なります。 異なるプロジェクト名を使用する場合には、Visual Studio プロジェクト作成時に入力したプロジェクト名に一致するようにすべての名前空間を調整しないと、コードがコンパイルされません。
+    > このラボの手順で指定されているプロジェクトの名前とVisual Studio名前を入力してください。 Visual Studio プロジェクトの名前が、コードでの名前空間の一部になります。 この手順のコードは、この手順で指定した Visual Studio プロジェクト名に一致する名前空間に応じて異なります。 異なるプロジェクト名を使用する場合には、Visual Studio プロジェクト作成時に入力したプロジェクト名に一致するようにすべての名前空間を調整しないと、コードがコンパイルされません。
 
-1. **[OK]** を選択します。 [**新しいユニバーサル Windows プラットフォームプロジェクト**] ダイアログで、[**最小バージョン**] が [また`Windows 10, Version 1809 (10.0; Build 17763)`はそれ以降] に設定されていることを確認し、[ **OK**] を選択します。
+1. **[OK]** をクリックします。 [新しい **ユニバーサル Windows プラットフォーム プロジェクト]** ダイアログで、[最小バージョン] が設定されている以降のバージョンを確認し `Windows 10, Version 1809 (10.0; Build 17763)` **、[OK]** を選択します。
 
 ## <a name="install-nuget-packages"></a>NuGet パッケージをインストールする
 
-に進む前に、後で使用する追加の NuGet パッケージをインストールします。
+次に進む前に、後で使用する追加の NuGet パッケージをインストールします。
 
-- アプリ内通知とロードインジケーターの UI コントロールを追加するには、 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls/)を使用します。
-- Microsoft Graph によって返される情報を表示するには、「 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid/) 」を参照してください。
-- ログインとアクセストークンの取得を処理するための、 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Graph.Controls) 。
+- Microsoft Graph Toolkit返される情報を表示するための[Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid。](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid/)
+- [ログインとToolkit取得を処理する Microsoft.Toolkit.Graph.Controls。](https://www.nuget.org/packages/Microsoft.Toolkit.Graph.Controls)
 
 1. **[ツール] > [NuGet パッケージ マネージャー] > [パッケージ マネージャー コンソール]** を選択します。 パッケージ マネージャー コンソールで、次のコマンドを入力します。
 
     ```powershell
-    Install-Package Microsoft.Toolkit.Uwp.Ui.Controls -Version 6.0.0
-    Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid -Version 6.0.0
+    Install-Package Microsoft.Toolkit.Uwp.Ui.Controls.DataGrid -IncludePrerelease
     Install-Package Microsoft.Toolkit.Graph.Controls -IncludePrerelease
     ```
 
@@ -35,27 +33,27 @@
 
 このセクションでは、アプリの UI を作成します。
 
-1. 最初に、認証状態を追跡するアプリケーションレベルの変数を追加します。 ソリューションエクスプローラーで **、app.xaml を展開し**、 **App.xaml.cs**を開きます。 次のプロパティを `App` クラスに追加します。
+1. まず、認証状態を追跡するアプリケーション レベルの変数を追加します。 ソリューション エクスプローラーで **App.xaml を展開し、アプリ** を **開** App.xaml.cs。 次のプロパティを `App` クラスに追加します。
 
     ```csharp
     public bool IsAuthenticated { get; set; }
     ```
 
-1. メインページのレイアウトを定義します。 を`MainPage.xaml`開き、内容全体を次のように置き換えます。
+1. メイン ページのレイアウトを定義します。 コンテンツ `MainPage.xaml` 全体を開き、次の内容に置き換えてください。
 
     :::code language="xaml" source="../demo/GraphTutorial/MainPage.xaml" id="MainPageXamlSnippet":::
 
-    これにより、アプリのメインビューとして機能する、**ホーム**および**予定表**のナビゲーションリンクが含まれる基本的な[navigationview](/uwp/api/windows.ui.xaml.controls.navigationview)が定義されます。 また、ビューのヘッダーに[Loginbutton](https://github.com/windows-toolkit/Graph-Controls)コントロールも追加します。 このコントロールによって、ユーザーはサインインとサインアウトができるようになります。コントロールが完全に有効になっていない場合は、後の手順で構成します。
+    これにより、ホーム、カレンダー、および新しいイベント ナビゲーションリンクを含む基本的な[NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview)が定義され、アプリのメイン ビューとして機能します。  また、ビューの [ヘッダーに LoginButton](https://github.com/windows-toolkit/Graph-Controls) コントロールを追加します。 このコントロールにより、ユーザーはサインインとサインアウトが可能です。コントロールはまだ完全には有効になっていませんが、後の演習で構成します。
 
-1. ソリューションエクスプローラーで**グラフ-チュートリアル**プロジェクトを右クリックし、[**新しいアイテムの追加 >**] を選択します。[**空白のページ**] `HomePage.xaml`を選択し、[**名前**] フィールドに「」と入力して、[**追加**] を選択します。 ファイル内の`<Grid>`既存の要素を次のように置き換えます。
+1. ソリューション エクスプローラーで **グラフ チュートリアル プロジェクトを** 右クリックし、[新しいアイテムの追加> **を選択します**。Choose **Blank Page,** enter `HomePage.xaml` in the **Name** field, and select **Add**. ファイル内の既存 `<Grid>` の要素を次の要素に置き換える。
 
     :::code language="xaml" source="../demo/GraphTutorial/HomePage.xaml" id="HomePageGridSnippet" highlight="2-5":::
 
-1. ソリューションエクスプローラーで**MainPage**を展開し、を`MainPage.xaml.cs`開きます。 認証状態を管理するため`MainPage`に、次の関数をクラスに追加します。
+1. ソリューション **エクスプローラーで MainPage.xaml** を展開し、開きます `MainPage.xaml.cs` 。 次の関数をクラスに追加 `MainPage` して、認証状態を管理します。
 
     :::code language="csharp" source="../demo/GraphTutorial/MainPage.xaml.cs" id="SetAuthStateSnippet":::
 
-1. この行の`MainPage()` `this.InitializeComponent();` **後**に、次のコードをコンストラクターに追加します。
+1. 次のコードを行の後 `MainPage()` の **コンストラクターに** 追加 `this.InitializeComponent();` します。
 
     ```csharp
     // Initialize auth state to false
@@ -69,9 +67,9 @@
     RootFrame.Navigate(typeof(HomePage));
     ```
 
-    アプリが初めて起動するときに、認証状態がに`false`初期化され、ホームページに移動します。
+    アプリが最初に起動すると、認証状態が初期化され、ホーム ページ `false` に移動します。
 
-1. ユーザーがナビゲーションビューでアイテムを選択したときに、要求されたページを読み込むために、次のイベントハンドラーを追加します。
+1. ユーザーがナビゲーション ビューからアイテムを選択するときに、要求されたページを読み込む次のイベント ハンドラーを追加します。
 
     ```csharp
     private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -80,6 +78,9 @@
 
         switch (invokedItem.ToLower())
         {
+            case "new event":
+                throw new NotImplementedException();
+                break;
             case "calendar":
                 throw new NotImplementedException();
                 break;
@@ -91,9 +92,9 @@
     }
     ```
 
-1. すべての変更を保存し、 **F5**キーを押すか、[デバッグ] を選択して Visual Studio で**デバッグを開始 >** ます。
+1. すべての変更を保存し **、F5** キーを押するか、[デバッグ] を選択>デバッグを開始Visual Studio。
 
     > [!NOTE]
-    > ご使用のコンピューター (ARM、x64、x86) に適した構成を選択してください。
+    > コンピューターに適した構成 (ARM x64、x86) を選択してください。
 
     ![ホーム ページのスクリーンショット](./images/create-app-01.png)
